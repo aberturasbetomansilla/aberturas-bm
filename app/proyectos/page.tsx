@@ -10,14 +10,82 @@ type MediaItem = {
   alt?: string
   title?: string
   category?: string
+  description?: string
 }
 
 const media: MediaItem[] = [
-  { id: "1", type: "image", src: "/modern-aluminum-windows-residential-building.jpg", title: "Residencial", category: "Ventanas" },
-  { id: "2", type: "image", src: "/modern-aluminum-storefront.jpg", title: "Frente Comercial", category: "Frentes" },
-  { id: "3", type: "image", src: "/luxury-aluminum-doors-entrance.jpg", title: "Puertas Premium", category: "Puertas" },
-  // Ejemplo de video (reemplazar src con tu MP4/URL)
-  // { id: "4", type: "video", src: "/videos/instalacion-ventanas.mp4", title: "Instalación", category: "Proceso" },
+  {
+    id: "1",
+    type: "image",
+    src: "/ventiluz.webp",
+    title: "Ventiluz",
+    category: "Interior",
+    description: "Ventiluz de aluminio a medida para baños y cocinas. Aporta ventilación controlada y luminosidad."
+  },
+  {
+    id: "2",
+    type: "image",
+    src: "/frentedelocales.webp",
+    title: "Frente Comercial",
+    category: "Frentes",
+    description: "Frente vidriado de alta resistencia, ideal para locales comerciales con perfilería de línea comercial."
+  },
+  {
+    id: "3",
+    type: "image",
+    src: "/postigo.webp",
+    title: "Postigos",
+    category: "Ventanas",
+    description: "Postigos de aluminio con terminación premium para control solar y seguridad."
+  },
+  {
+    id: "4",
+    type: "image",
+    src: "/puertasparanichos.webp",
+    title: "Puertas para nichos",
+    category: "Puertas",
+    description: "Puertas de aluminio para nichos y placares, corredizas o batientes, optimizadas para espacios reducidos."
+  },
+  {
+    id: "5",
+    type: "image",
+    src: "/ventanas.webp",
+    title: "Ventanas",
+    category: "Ventanas",
+    description: "Ventanas de aluminio a medida con distintos sistemas de apertura según la necesidad del proyecto."
+  },
+  {
+    id: "6",
+    type: "image",
+    src: "/ventanascorredizas.webp",
+    title: "Ventanas Corredizas",
+    category: "Ventanas / puerta",
+    description: "Sistema corredizo suave y hermético para optimizar el espacio y facilitar el mantenimiento."
+  },
+  {
+    id: "7",
+    type: "image",
+    src: "/vestidores.webp",
+    title: "Vestidores",
+    category: "Interior",
+    description: "Frentes de placard y vestidores en aluminio con paneles a elección para una estética moderna."
+  },
+  {
+    id: "8",
+    type: "image",
+    src: "/puertasdeingreso.webp",
+    title: "Puertas de Ingresos",
+    category: "Puertas",
+    description: "Puertas de ingreso robustas con cerraduras de seguridad y acabados de alta durabilidad."
+  },
+  {
+    id: "9",
+    type: "image",
+    src: "/cerramientodequinchos.webp",
+    title: "Cerramiento de Quinchos",
+    category: "Ventanas / puerta",
+    description: "Cerramientos integrales en aluminio y vidrio para espacios semicubiertos, mejorando confort y protección."
+  },
 ]
 
 export default function ProyectosPage() {
@@ -60,6 +128,9 @@ export default function ProyectosPage() {
                 </div>
               )}
               {item.title && <h3 className="text-lg font-semibold">{item.title}</h3>}
+              {item.description && (
+                <p className="mt-1 text-sm text-muted-foreground">{item.description}</p>
+              )}
             </div>
           </motion.div>
         ))}
