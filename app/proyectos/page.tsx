@@ -107,12 +107,14 @@ export default function ProyectosPage() {
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.4, delay: index * 0.05 }}
-            className="glass-strong rounded-2xl overflow-hidden group"
+            transition={{ duration: 0.35, delay: index * 0.05, ease: [0.2, 0.8, 0.2, 1] }}
+            whileHover={{ y: -12, scale: 1.03 }}
+            whileTap={{ scale: 0.95, y: 2 }}
+            className="glass-strong rounded-2xl overflow-hidden group will-change-transform cursor-pointer select-none hover:shadow-2xl hover:shadow-black/30 active:shadow-lg active:shadow-black/40 ring-1 ring-transparent hover:ring-primary/20 active:ring-2 active:ring-primary/40 transition-all duration-300"
           >
             {item.type === "image" ? (
               <div className="relative aspect-[4/3]">
-                <Image src={item.src} alt={item.alt || item.title || "Proyecto"} fill className="object-cover group-hover:scale-105 transition-transform duration-300" />
+                <Image src={item.src} alt={item.alt || item.title || "Proyecto"} fill className="object-cover group-hover:scale-110 transition-transform duration-300" />
               </div>
             ) : (
               <div className="relative aspect-[4/3] bg-black">
