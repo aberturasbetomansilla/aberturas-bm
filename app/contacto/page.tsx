@@ -99,7 +99,7 @@ export default function ContactoPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="glass-strong rounded-2xl p-6 flex items-start gap-4 hover:shadow-lg transition-shadow block"
+                className="glass-strong rounded-2xl p-6 flex items-start gap-4 hover:shadow-lg transition-shadow"
               >
                 <div className="bg-primary/10 w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0">
                   <info.icon className="h-6 w-6 text-primary" />

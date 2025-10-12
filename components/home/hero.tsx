@@ -46,7 +46,7 @@ export function Hero() {
           ))}
         </div>
         {/* Light overlay to ensure text readability */}
-        <div className="absolute inset-0 bg-white/70" />
+        <div className="absolute inset-0 bg-white/50" />
         {/* Subtle pattern on top */}
         <div
           className="absolute inset-0 opacity-30"
@@ -69,7 +69,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-xl md:text-2xl text-muted-foreground mb-12 leading-relaxed"
+            className="text-xl md:text-2xl text-card-foreground italic mb-12 leading-relaxed"
           >
             Con calidad profesional y más de 20 años de experiencia en proyectos residenciales y comerciales
           </motion.p>
