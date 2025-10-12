@@ -8,9 +8,17 @@ import Image from "next/image"
 import { useEffect, useState } from "react"
 
 const heroImages = [
-  "/modern-aluminum-windows-residential-building.jpg",
-  "/modern-aluminum-storefront.jpg",
-  "/luxury-aluminum-doors-entrance.jpg",
+  "/carrusel1.webp",
+  "/carrusel2.webp",
+  "/carrusel3.webp",
+  "/carrusel4.webp",
+]
+
+const heroImagesMobile = [
+  // "/mobilecarrusel1.webp",
+  "/mobilecarrusel2.webp",
+  "/mobilecarrusel3.webp",
+  "/mobilecarrusel4.webp",
 ]
 
 export function Hero() {
@@ -26,7 +34,7 @@ export function Hero() {
     <section className="relative min-h-[75vh] pt-[40px] flex items-center justify-center overflow-hidden">
       {/* Background slideshow */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0">
+        <div className="absolute inset-0 hidden md:block">
           {heroImages.map((src, i) => (
             <motion.div
               key={src}
@@ -45,8 +53,15 @@ export function Hero() {
             </motion.div>
           ))}
         </div>
+        <div className="absolute inset-0 block md:hidden">
+          {heroImagesMobile.map((src, i) => (
+            <motion.div key={src} initial={{ opacity: 0 }} animate={{ opacity: i === activeIndex ? 1 : 0 }} transition={{ duration: 1.2, ease: "easeInOut" }} className="absolute inset-0">
+              <Image src={src} alt="Proyectos de aberturas de aluminio" fill className="object-cover" priority={i === 0} />
+            </motion.div>
+          ))}
+        </div>
         {/* Light overlay to ensure text readability */}
-        <div className="absolute inset-0 bg-white/50" />
+        <div className="absolute inset-0 bg-white/40" />
         {/* Subtle pattern on top */}
         <div
           className="absolute inset-0 opacity-30"
