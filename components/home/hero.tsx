@@ -11,7 +11,6 @@ const heroImages = [
   "/carrusel1.webp",
   "/carrusel2.webp",
   "/carrusel3.webp",
-  "/carrusel4.webp",
 ]
 
 const heroImagesMobile = [
