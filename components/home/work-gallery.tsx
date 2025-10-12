@@ -5,24 +5,49 @@ import { motion } from "framer-motion"
 
 const works = [
   {
-    title: "Proyecto Residencial",
-    image: "/modern-aluminum-windows-residential-building.jpg",
-    category: "Ventanas",
+    title: "Ventiluz",
+    image: "/ventiluz.webp",
+    category: "Interior",
   },
   {
     title: "Frente Comercial",
-    image: "/modern-aluminum-storefront-commercial-building.jpg",
+    image: "/frentedelocales.webp",
     category: "Frentes",
   },
   {
-    title: "Puertas Premium",
-    image: "/luxury-aluminum-doors-entrance.jpg",
+    title: "Postigos",
+    image: "/postigo.webp",
+    category: "Ventanas",
+  },
+  {
+    title: "Puertas para nichos",
+    image: "/puertasparanichos.webp",
     category: "Puertas",
   },
   {
-    title: "Obra Nueva",
-    image: "/aluminum-windows-construction-site.jpg",
-    category: "Construcción",
+    title: "Ventanas",
+    image: "/ventanas.webp",
+    category: "Ventanas",
+  },
+  {
+    title: "Ventanas Corredizas",
+    image: "/ventanascorredizas.webp",
+    category: "Ventanas / puerta",
+  },
+  {
+    title: "Vestidores",
+    image: "/vestidores.webp",
+    category: "Interior",
+  },
+  {
+    title: "Puertas de Ingresos",
+    image: "/puertasdeingreso.webp",
+    category: "Puertas",
+  },
+  {
+    title: "Cerramiento de Quinchos",
+    image: "/cerramientodequinchos.webp",
+    category: "Ventanas / puerta",
   },
 ]
 
@@ -54,7 +79,7 @@ export function WorkGallery() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-              <div className="text-sm font-medium text-primary-light mb-2">{work.category}</div>
+              <div className="inline-flex w-fit items-center text-sm font-medium mb-2 px-2 py-1 rounded-md bg-primary/10 text-white">{work.category}</div>
               <h3 className="text-2xl font-semibold">{work.title}</h3>
             </div>
           </motion.div>
